@@ -1,6 +1,13 @@
 import numpy as np
 import cv2
 
+'''Pipeline:
+1. Create canvas to draw on
+2. Draw a triangle according to 3 points defined
+3. Calculate the center point
+4. Put text on the center point
+'''
+
 # Width and height of the background
 W = 600
 H = 600

@@ -2,6 +2,16 @@ import numpy as np
 import cv2 
 import matplotlib.pyplot as plt
 
+'''Pipeline
+Detect coins using watershed transform technique
+1. Read image
+2. Blur image to remove noise
+3. Convert to grayscale and do the thresholding
+4. Detect coins boundary with watershed transform
+5. Draw circles and count the number of coins
+'''
+
+
 # Original image
 img = cv2.imread("ex3.jpg")
 # plt.imshow(img); plt.title("Original"); plt.show()

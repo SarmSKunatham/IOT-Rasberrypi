@@ -5,7 +5,7 @@ Pipeline:
 2. Blur with Gaussian filter
 3. Canny edge detection
 4. ROI masking
-5. Hough transform
+5. Hough transform to find lines
 6. Draw Lines
 '''
 # Import libraries

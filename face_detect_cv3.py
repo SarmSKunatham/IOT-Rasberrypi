@@ -1,6 +1,15 @@
 import cv2
 import sys
 
+'''Pipeline:
+Using Haar Cascade Classifier to detect faces (OpenCV)
+1. Load the cascade
+2. Read the input image
+3. Convert to grayscale
+4. Detect faces
+5. Draw rectangle around the faces
+'''
+
 # Get user supplied values
 imagePath = sys.argv[1]
 cascPath = "haarcascade_frontalface_default.xml"
