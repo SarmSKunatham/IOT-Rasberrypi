@@ -11,9 +11,9 @@ Server_ip = "broker.netpie.io"
 Subscribe_Topic = "@msg/DHT11"
 Publish_Topic = "@msg/DHT11"
 
-Client_ID = "53ea82dd-895b-4e8c-8ebd-7a959ba7134a"
-Token = "7ZqEWUhxzf528m5jTXkgM7Y5TyipK7RF"
-Secret = "nJ*Tn6vXkVWYS9KLfp0$YwQnDrSzRB_r"
+Client_ID = "e5c577c5-595f-44b9-bf51-b86a37fc9a59"
+Token = "BnKvdbn9h4JV21pMB81AyMQq3p9KWNza"
+Secret = "GSgcy88#TX#zrLh$8D0G9NhOJZgnn*BN"
 
 MqttUser_Pass = {"username":Token,"password":Secret}
 
@@ -36,12 +36,18 @@ client.connect(Server_ip, port)
 client.loop_start()
 
 while True:
-        data = {
-        "Temp": random.randrange(30, 40),
-        "Humi": random.randrange(50, 80)
-        }
-        data_out=json.dumps(data) # encode object to JSON
-        client.publish(Publish_Topic, data_out, retain= True)
-        print ("Publish.....")
-        time.sleep(2)
+        # data = {
+        # "Temp": random.randrange(30, 40),
+        # "Humi": random.randrange(50, 80)
+        # }
+        # data_out=json.dumps(data) # encode object to JSON
+        # client.publish(Publish_Topic, data_out, retain= True)
+        # print ("Publish.....")
+        # time.sleep(2)
+        data = input("Type your Message: ")
+        if (data):
+            data = f"User #2: {data}"
+            data_out = json.dumps(data)
+            client.publish(Publish_Topic, data_out, retain= True)
+
         
